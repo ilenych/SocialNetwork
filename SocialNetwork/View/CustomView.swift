@@ -37,9 +37,9 @@ class CustomView: UIView {
         setupImageView()
     }
     
-    convenience init(view: UIView, placeholder: String, isSecureTextEntry: Bool, imageName: String) {
+    convenience init(viewWidth: CGFloat, placeholder: String, isSecureTextEntry: Bool, imageName: String) {
         self.init(frame: .zero)
-        self.layer.cornerRadius = view.frame.width / 12
+        self.layer.cornerRadius = viewWidth / 12
         textField.placeholder = placeholder
         textField.isSecureTextEntry = isSecureTextEntry
         imageView.image = UIImage(named: imageName)
