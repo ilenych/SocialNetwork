@@ -53,7 +53,7 @@ class AuthViewController: UIViewController {
     }
     
     @objc func didTapSignupButton() {
-        router.openSigninViewController()
+        router.openSignupViewController()
     }
     
     //MARK: - Setup

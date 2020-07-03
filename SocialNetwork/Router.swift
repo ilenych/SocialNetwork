@@ -10,8 +10,8 @@ import UIKit
 
 protocol RouterProtocol {
     func openLoginViewController()
-    func openSigninViewController()
-//    func openMainViewController()
+    func openSignupViewController()
+    //    func openMainViewController()
 }
 
 class Router {
@@ -22,7 +22,7 @@ class Router {
 }
 
 extension Router: RouterProtocol {
- 
+    
     
     func openLoginViewController() {
         let loginViewController: LoginViewController = LoginViewController()
@@ -31,7 +31,12 @@ extension Router: RouterProtocol {
         viewController.present(loginViewController, animated: true, completion: nil)
     }
     
-    func openSigninViewController() {
+    func openSignupViewController() {
+        let signupViewController: SignupViewController = SignupViewController()
+        signupViewController.modalTransitionStyle = .crossDissolve
+        signupViewController.modalPresentationStyle = .overCurrentContext
+        viewController.present(signupViewController, animated: true, completion: nil)
+        
         
     }
     

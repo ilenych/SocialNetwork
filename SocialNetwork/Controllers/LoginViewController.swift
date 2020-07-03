@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
     }()
     
     private lazy var emailView: CustomView = {
-        let v = CustomView(view: self.view,
+        let v = CustomView(viewWidth: view.frame.width,
                            placeholder: "Email",
                            isSecureTextEntry: false,
                            imageName: "email")
@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
     }()
     
     private lazy var passwordView: CustomView = {
-        let v = CustomView(view: self.view,
+        let v = CustomView(viewWidth: view.frame.width,
                            placeholder: "Password",
                            isSecureTextEntry: true,
                            imageName: "password")
@@ -45,14 +45,14 @@ class LoginViewController: UIViewController {
         return v
     }()
     
-    private let signinLabel: CustomLabel = {
+    private let signupLabel: CustomLabel = {
         let l = CustomLabel(text: "Нет аккаунта?", size: 18)
         return l
     }()
     
-    private lazy var signinButton: AuthButton = {
+    private lazy var signupButton: AuthButton = {
         let b = AuthButton(title: "Зарегистрироваться")
-        b.addTarget(self, action: #selector(didTapSigninButton), for: .touchUpInside)
+        b.addTarget(self, action: #selector(didTapSignupButton), for: .touchUpInside)
         return b
     }()
     
@@ -70,16 +70,17 @@ class LoginViewController: UIViewController {
         setupPasswordView()
         setupLoginButton()
         setupImageView()
-        setupSigninLabel()
-        setupSigninButton()
+        setupSignupLabel()
+        setupSignupButton()
     }
     
     //MARK: - Functions
     @objc func didTapLoginButton() {
+//        router.openLoginViewController()
     }
     
-    @objc func didTapSigninButton() {
-        router.openSigninViewController()
+    @objc func didTapSignupButton() {
+        router.openSignupViewController()
     }
     
     //MARK: - Setup
@@ -112,9 +113,9 @@ class LoginViewController: UIViewController {
             make.centerX.equalTo(view.snp.centerX)
         }
     }
-    private func setupSigninLabel() {
-        view.addSubview(signinLabel)
-        signinLabel.snp.makeConstraints { (make) in
+    private func setupSignupLabel() {
+        view.addSubview(signupLabel)
+        signupLabel.snp.makeConstraints { (make) in
             make.width.equalTo(view.frame.width - 60)
             make.height.equalTo(view.frame.width / 10)
             make.top.equalTo(passwordView.snp.bottom).offset(20)
@@ -122,12 +123,12 @@ class LoginViewController: UIViewController {
         }
     }
     
-    private func setupSigninButton() {
-        view.addSubview(signinButton)
-        signinButton.snp.makeConstraints { (make) in
+    private func setupSignupButton() {
+        view.addSubview(signupButton)
+        signupButton.snp.makeConstraints { (make) in
             make.width.equalTo(view.frame.width - 60)
             make.height.equalTo(view.frame.width / 10)
-            make.top.equalTo(signinLabel.snp.bottom)
+            make.top.equalTo(signupLabel.snp.bottom)
             make.centerX.equalTo(view.snp.centerX)
         }
     }
