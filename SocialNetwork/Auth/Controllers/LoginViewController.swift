@@ -76,7 +76,12 @@ class LoginViewController: UIViewController {
     
     //MARK: - Functions
     @objc func didTapLoginButton() {
-//        router.openLoginViewController()
+//        guard let email = emailView.textField.text,
+//               let password = passwordView.textField.text,
+//               email != "", password != ""
+//               else { print("Error in enter" ); return }
+           
+//        NetworkService.shared.login(login: "e", password: "e")
     }
     
     @objc func didTapSignupButton() {
