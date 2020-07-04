@@ -34,8 +34,10 @@ class GalleryViewController: UIViewController {
         ai.hidesWhenStopped = true
         return ai
     }()
+    
     /// For model
     private var galleryContent = [GalleryContent]()
+    private var images = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,7 @@ class GalleryViewController: UIViewController {
         /// Setups
         setupCollectionView()
         setupActivityIndicator()
+        
         /// Fetch json to model
         DataFetcherService.shared.fetchGallary { (galleryModel) in
             guard let gallery = galleryModel?.gallery else { return }
@@ -71,20 +74,27 @@ class GalleryViewController: UIViewController {
 //MARK: - UICollectionViewDataSource
 extension GalleryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3 //galleryContent.count
+        return galleryContent.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: GalleryCollectionViewCell.self), for: indexPath)
         NetworkService.shared.downloadImage(urlString: self.galleryContent[indexPath.row].img) { (image) in
+            /// Create image view
             let imageView = UIImageView(image: image)
             imageView.contentMode = .scaleAspectFill
+            imageView.layer.masksToBounds = true
+            /// add image in array
+            self.images.append(image)
             
+            /// display image
             DispatchQueue.main.async {
                 cell.backgroundView = imageView
             }
-            
+            /// stop activityIndicator
             self.activityIndicator.stopAnimating()
+            
+            /// set border to cell
             cell.layer.borderWidth = 1
             cell.layer.borderColor = UIColor.white.cgColor
         }
@@ -96,7 +106,9 @@ extension GalleryViewController: UICollectionViewDataSource {
 extension GalleryViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("User tapped on item \(indexPath.row)")
-        
+        let ppvc: PagePhotoViewController = PagePhotoViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+        ppvc.images = images
+        ppvc.didSelectItem = indexPath.row
+        self.present(ppvc, animated: true)
     }
 }

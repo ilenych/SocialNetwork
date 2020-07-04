@@ -27,6 +27,9 @@
 		97BFE7C624AFC6B40084FED0 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7C524AFC6B40084FED0 /* GalleryCollectionViewCell.swift */; };
 		97BFE7C924B089FE0084FED0 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7C824B089FE0084FED0 /* DataFetcherService.swift */; };
 		97BFE7CB24B08CB80084FED0 /* GalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7CA24B08CB80084FED0 /* GalleryModel.swift */; };
+		97BFE7D924B0E1180084FED0 /* CustomScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7D824B0E1180084FED0 /* CustomScrollView.swift */; };
+		97BFE7DB24B0E2450084FED0 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7DA24B0E2450084FED0 /* PhotoViewController.swift */; };
+		97BFE7DD24B0E3D80084FED0 /* PagePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7DC24B0E3D80084FED0 /* PagePhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		97BFE7C524AFC6B40084FED0 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		97BFE7C824B089FE0084FED0 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
 		97BFE7CA24B08CB80084FED0 /* GalleryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryModel.swift; sourceTree = "<group>"; };
+		97BFE7D824B0E1180084FED0 /* CustomScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollView.swift; sourceTree = "<group>"; };
+		97BFE7DA24B0E2450084FED0 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		97BFE7DC24B0E3D80084FED0 /* PagePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagePhotoViewController.swift; sourceTree = "<group>"; };
 		9E9F266393DAC84365244B95 /* Pods-SocialNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.debug.xcconfig"; path = "Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 		F8436F800D22839B4CD380EA /* Pods_SocialNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -102,8 +108,7 @@
 				97BFE79C24AF64A00084FED0 /* SceneDelegate.swift */,
 				97BFE7BF24AFC00E0084FED0 /* TabBarViewController.swift */,
 				97BFE7C124AFC0C80084FED0 /* PostViewController.swift */,
-				97BFE7C324AFC0D80084FED0 /* GalleryViewController.swift */,
-				97BFE7C524AFC6B40084FED0 /* GalleryCollectionViewCell.swift */,
+				97BFE7D424B0B2B10084FED0 /* Gallery */,
 				97BFE7C724AFC8510084FED0 /* Service */,
 				97BFE7BE24AFBFB60084FED0 /* Auth */,
 				97BFE7A024AF64A00084FED0 /* Main.storyboard */,
@@ -149,9 +154,45 @@
 			children = (
 				97BFE7BC24AF93780084FED0 /* NetworkService.swift */,
 				97BFE7C824B089FE0084FED0 /* DataFetcherService.swift */,
-				97BFE7CA24B08CB80084FED0 /* GalleryModel.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		97BFE7D424B0B2B10084FED0 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				97BFE7D624B0B2CB0084FED0 /* Controller */,
+				97BFE7D524B0B2C40084FED0 /* View */,
+				97BFE7D724B0B2D40084FED0 /* Model */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		97BFE7D524B0B2C40084FED0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				97BFE7D824B0E1180084FED0 /* CustomScrollView.swift */,
+				97BFE7C524AFC6B40084FED0 /* GalleryCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		97BFE7D624B0B2CB0084FED0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				97BFE7C324AFC0D80084FED0 /* GalleryViewController.swift */,
+				97BFE7DC24B0E3D80084FED0 /* PagePhotoViewController.swift */,
+				97BFE7DA24B0E2450084FED0 /* PhotoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		97BFE7D724B0B2D40084FED0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				97BFE7CA24B08CB80084FED0 /* GalleryModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A142B6542534BC3A37A0086A /* Frameworks */ = {
@@ -281,7 +322,9 @@
 				97BFE7C424AFC0D80084FED0 /* GalleryViewController.swift in Sources */,
 				97BFE7BD24AF93780084FED0 /* NetworkService.swift in Sources */,
 				97BFE7C624AFC6B40084FED0 /* GalleryCollectionViewCell.swift in Sources */,
+				97BFE7DD24B0E3D80084FED0 /* PagePhotoViewController.swift in Sources */,
 				97BFE7C924B089FE0084FED0 /* DataFetcherService.swift in Sources */,
+				97BFE7DB24B0E2450084FED0 /* PhotoViewController.swift in Sources */,
 				97BFE7BB24AF84230084FED0 /* SignupViewController.swift in Sources */,
 				97BFE7C024AFC00E0084FED0 /* TabBarViewController.swift in Sources */,
 				97BFE7B324AF71770084FED0 /* LoginViewController.swift in Sources */,
@@ -290,6 +333,7 @@
 				97BFE7AF24AF68C40084FED0 /* AuthButton.swift in Sources */,
 				97BFE7B524AF72830084FED0 /* CustomLabel.swift in Sources */,
 				97BFE7B124AF6EA70084FED0 /* Router.swift in Sources */,
+				97BFE7D924B0E1180084FED0 /* CustomScrollView.swift in Sources */,
 				97BFE79B24AF64A00084FED0 /* AppDelegate.swift in Sources */,
 				97BFE7CB24B08CB80084FED0 /* GalleryModel.swift in Sources */,
 				97BFE79D24AF64A00084FED0 /* SceneDelegate.swift in Sources */,
