@@ -25,7 +25,7 @@ class PhotoViewController: UIViewController {
         
     }
     //MARK: - Functions
-    func setupCustomScrollView() {
+    private func setupCustomScrollView() {
         view.addSubview(customScrollView)
         customScrollView.snp.makeConstraints { (make) in
             make.edges.equalTo(view).inset(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))

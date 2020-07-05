@@ -56,14 +56,14 @@ class GalleryViewController: UIViewController {
     
     //MARK: - Setups
     
-    func setupCollectionView() {
+    private func setupCollectionView() {
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { (make) in
             make.edges.equalTo(view).inset(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
         }
     }
     
-    func setupActivityIndicator() {
+    private func setupActivityIndicator() {
         collectionView.addSubview(activityIndicator)
         activityIndicator.snp.makeConstraints { (make) in
             make.centerX.equalTo(view.snp.centerX)

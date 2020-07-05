@@ -123,7 +123,7 @@ class LoginViewController: UIViewController {
         signupLabel.snp.makeConstraints { (make) in
             make.width.equalTo(view.frame.width - 60)
             make.height.equalTo(view.frame.width / 10)
-            make.top.equalTo(passwordView.snp.bottom).offset(20)
+            make.top.equalTo(passwordView.snp.bottom).offset(16)
             make.centerX.equalTo(view.snp.centerX)
         }
     }

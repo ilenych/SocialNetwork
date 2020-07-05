@@ -22,7 +22,6 @@
 		97BFE7BB24AF84230084FED0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7BA24AF84230084FED0 /* SignupViewController.swift */; };
 		97BFE7BD24AF93780084FED0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7BC24AF93780084FED0 /* NetworkService.swift */; };
 		97BFE7C024AFC00E0084FED0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7BF24AFC00E0084FED0 /* TabBarViewController.swift */; };
-		97BFE7C224AFC0C80084FED0 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7C124AFC0C80084FED0 /* PostViewController.swift */; };
 		97BFE7C424AFC0D80084FED0 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7C324AFC0D80084FED0 /* GalleryViewController.swift */; };
 		97BFE7C624AFC6B40084FED0 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7C524AFC6B40084FED0 /* GalleryCollectionViewCell.swift */; };
 		97BFE7C924B089FE0084FED0 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7C824B089FE0084FED0 /* DataFetcherService.swift */; };
@@ -30,6 +29,12 @@
 		97BFE7D924B0E1180084FED0 /* CustomScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7D824B0E1180084FED0 /* CustomScrollView.swift */; };
 		97BFE7DB24B0E2450084FED0 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7DA24B0E2450084FED0 /* PhotoViewController.swift */; };
 		97BFE7DD24B0E3D80084FED0 /* PagePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7DC24B0E3D80084FED0 /* PagePhotoViewController.swift */; };
+		97BFE7E024B0FC060084FED0 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7DF24B0FC060084FED0 /* HeaderView.swift */; };
+		97BFE7E224B106030084FED0 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7E124B106030084FED0 /* PostTableViewController.swift */; };
+		97BFE7E424B1068D0084FED0 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7E324B1068D0084FED0 /* PostTableViewCell.swift */; };
+		97BFE7E624B106FB0084FED0 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7E524B106FB0084FED0 /* PostView.swift */; };
+		97BFE7E824B1D0390084FED0 /* LikesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7E724B1D0390084FED0 /* LikesView.swift */; };
+		97BFE7EB24B1DCE60084FED0 /* CustomLikeButtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7EA24B1DCE60084FED0 /* CustomLikeButtom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +55,6 @@
 		97BFE7BA24AF84230084FED0 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		97BFE7BC24AF93780084FED0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		97BFE7BF24AFC00E0084FED0 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = SocialNetwork/TabBarViewController.swift; sourceTree = SOURCE_ROOT; };
-		97BFE7C124AFC0C80084FED0 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		97BFE7C324AFC0D80084FED0 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		97BFE7C524AFC6B40084FED0 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		97BFE7C824B089FE0084FED0 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
@@ -58,6 +62,12 @@
 		97BFE7D824B0E1180084FED0 /* CustomScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollView.swift; sourceTree = "<group>"; };
 		97BFE7DA24B0E2450084FED0 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		97BFE7DC24B0E3D80084FED0 /* PagePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagePhotoViewController.swift; sourceTree = "<group>"; };
+		97BFE7DF24B0FC060084FED0 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		97BFE7E124B106030084FED0 /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
+		97BFE7E324B1068D0084FED0 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		97BFE7E524B106FB0084FED0 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		97BFE7E724B1D0390084FED0 /* LikesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesView.swift; sourceTree = "<group>"; };
+		97BFE7EA24B1DCE60084FED0 /* CustomLikeButtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLikeButtom.swift; sourceTree = "<group>"; };
 		9E9F266393DAC84365244B95 /* Pods-SocialNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.debug.xcconfig"; path = "Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 		F8436F800D22839B4CD380EA /* Pods_SocialNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -107,26 +117,26 @@
 				97BFE79A24AF64A00084FED0 /* AppDelegate.swift */,
 				97BFE79C24AF64A00084FED0 /* SceneDelegate.swift */,
 				97BFE7BF24AFC00E0084FED0 /* TabBarViewController.swift */,
-				97BFE7C124AFC0C80084FED0 /* PostViewController.swift */,
-				97BFE7D424B0B2B10084FED0 /* Gallery */,
-				97BFE7C724AFC8510084FED0 /* Service */,
+				97BFE7DE24B0FBE90084FED0 /* Post */,
 				97BFE7BE24AFBFB60084FED0 /* Auth */,
+				97BFE7D424B0B2B10084FED0 /* Gallery */,
 				97BFE7A024AF64A00084FED0 /* Main.storyboard */,
 				97BFE7A324AF64A20084FED0 /* Assets.xcassets */,
 				97BFE7A524AF64A20084FED0 /* LaunchScreen.storyboard */,
 				97BFE7A824AF64A20084FED0 /* Info.plist */,
+				97BFE7C724AFC8510084FED0 /* Service */,
 			);
 			path = SocialNetwork;
 			sourceTree = "<group>";
 		};
-		97BFE7B624AF72AD0084FED0 /* View */ = {
+		97BFE7B624AF72AD0084FED0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				97BFE7B424AF72830084FED0 /* CustomLabel.swift */,
 				97BFE7AE24AF68C40084FED0 /* AuthButton.swift */,
 				97BFE7B724AF74A20084FED0 /* CustomView.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		97BFE7B924AF81570084FED0 /* Controllers */ = {
@@ -142,7 +152,7 @@
 		97BFE7BE24AFBFB60084FED0 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				97BFE7B624AF72AD0084FED0 /* View */,
+				97BFE7B624AF72AD0084FED0 /* Views */,
 				97BFE7B924AF81570084FED0 /* Controllers */,
 				97BFE7B024AF6EA70084FED0 /* Router.swift */,
 			);
@@ -161,30 +171,30 @@
 		97BFE7D424B0B2B10084FED0 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
-				97BFE7D624B0B2CB0084FED0 /* Controller */,
-				97BFE7D524B0B2C40084FED0 /* View */,
 				97BFE7D724B0B2D40084FED0 /* Model */,
+				97BFE7D524B0B2C40084FED0 /* Views */,
+				97BFE7D624B0B2CB0084FED0 /* Controllers */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
 		};
-		97BFE7D524B0B2C40084FED0 /* View */ = {
+		97BFE7D524B0B2C40084FED0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				97BFE7D824B0E1180084FED0 /* CustomScrollView.swift */,
 				97BFE7C524AFC6B40084FED0 /* GalleryCollectionViewCell.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		97BFE7D624B0B2CB0084FED0 /* Controller */ = {
+		97BFE7D624B0B2CB0084FED0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				97BFE7C324AFC0D80084FED0 /* GalleryViewController.swift */,
 				97BFE7DC24B0E3D80084FED0 /* PagePhotoViewController.swift */,
 				97BFE7DA24B0E2450084FED0 /* PhotoViewController.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		97BFE7D724B0B2D40084FED0 /* Model */ = {
@@ -193,6 +203,35 @@
 				97BFE7CA24B08CB80084FED0 /* GalleryModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		97BFE7DE24B0FBE90084FED0 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				97BFE7E924B1D03D0084FED0 /* Views */,
+				97BFE7EC24B1E2270084FED0 /* Controllers */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		97BFE7E924B1D03D0084FED0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				97BFE7DF24B0FC060084FED0 /* HeaderView.swift */,
+				97BFE7E524B106FB0084FED0 /* PostView.swift */,
+				97BFE7E724B1D0390084FED0 /* LikesView.swift */,
+				97BFE7EA24B1DCE60084FED0 /* CustomLikeButtom.swift */,
+				97BFE7E324B1068D0084FED0 /* PostTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		97BFE7EC24B1E2270084FED0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				97BFE7E124B106030084FED0 /* PostTableViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		A142B6542534BC3A37A0086A /* Frameworks */ = {
@@ -318,7 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97BFE7C224AFC0C80084FED0 /* PostViewController.swift in Sources */,
+				97BFE7EB24B1DCE60084FED0 /* CustomLikeButtom.swift in Sources */,
 				97BFE7C424AFC0D80084FED0 /* GalleryViewController.swift in Sources */,
 				97BFE7BD24AF93780084FED0 /* NetworkService.swift in Sources */,
 				97BFE7C624AFC6B40084FED0 /* GalleryCollectionViewCell.swift in Sources */,
@@ -329,13 +368,18 @@
 				97BFE7C024AFC00E0084FED0 /* TabBarViewController.swift in Sources */,
 				97BFE7B324AF71770084FED0 /* LoginViewController.swift in Sources */,
 				97BFE7B824AF74A20084FED0 /* CustomView.swift in Sources */,
+				97BFE7E424B1068D0084FED0 /* PostTableViewCell.swift in Sources */,
 				97BFE79F24AF64A00084FED0 /* AuthViewController.swift in Sources */,
+				97BFE7E824B1D0390084FED0 /* LikesView.swift in Sources */,
 				97BFE7AF24AF68C40084FED0 /* AuthButton.swift in Sources */,
+				97BFE7E624B106FB0084FED0 /* PostView.swift in Sources */,
 				97BFE7B524AF72830084FED0 /* CustomLabel.swift in Sources */,
 				97BFE7B124AF6EA70084FED0 /* Router.swift in Sources */,
+				97BFE7E024B0FC060084FED0 /* HeaderView.swift in Sources */,
 				97BFE7D924B0E1180084FED0 /* CustomScrollView.swift in Sources */,
 				97BFE79B24AF64A00084FED0 /* AppDelegate.swift in Sources */,
 				97BFE7CB24B08CB80084FED0 /* GalleryModel.swift in Sources */,
+				97BFE7E224B106030084FED0 /* PostTableViewController.swift in Sources */,
 				97BFE79D24AF64A00084FED0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

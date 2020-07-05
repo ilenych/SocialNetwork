@@ -14,7 +14,7 @@ class TabBarViewController: UITabBarController {
 
         view.backgroundColor = .red
         
-        let firstViewController = PostViewController()
+        let firstViewController = PostTableViewController()
                 
         firstViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 0)
 
@@ -26,16 +26,5 @@ class TabBarViewController: UITabBarController {
 
         viewControllers = tabBarList
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
