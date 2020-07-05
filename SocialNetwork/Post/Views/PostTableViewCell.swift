@@ -9,35 +9,40 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
     
-    var title = ""
-    var subtitle = ""
-    var imageStr = ""
+    //MARK: - Variables
+    
+    var postContent: PostModel?
+    var likesContent: LikesModel?
     
     private lazy var headerView: HeaderView = {
-        let hv = HeaderView(title: title, subtitle: subtitle, image: UIImage(named: imageStr)!)
+        guard let postContent = postContent else {return HeaderView() }
+        let hv = HeaderView(title: postContent.userName , subtitle: postContent.time, imageUrl: postContent.postUrlImage)
         hv.backgroundColor = .green
         return hv
     }()
-
+    
     private lazy var postView: PostView = {
-       let pv = PostView(textContent: title, image: UIImage(named: imageStr)!)
+         guard let postContent = postContent else { return PostView() }
+        let pv = PostView(textContent: postContent.postText, imageUrl: postContent.postUrlImage )
         pv.backgroundColor = .yellow
         return pv
     }()
     
     private lazy var likesView: LikesView = {
-       let lv = LikesView(fireCount: "🔥 2412")
+        guard let likesContent = likesContent  else { return LikesView() }
+        let lv = LikesView(model: likesContent)
         lv.backgroundColor = .blue
         return lv
     }()
     
-    
+    //MARK: - Override
     override func draw(_ rect: CGRect) {
-         self.backgroundColor = .lightGray
+        self.backgroundColor = .lightGray
         setupHeaderView()
         setupPostView()
         setupLikesView()
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -48,26 +53,27 @@ class PostTableViewCell: UITableViewCell {
         
     }
     
+    
     //MARK: - Setups
-          private func setupHeaderView() {
-              self.addSubview(headerView)
-              headerView.snp.makeConstraints { (make) in
-                  make.centerX.equalTo(self.snp.centerX)
-                  make.width.equalTo(self.snp.width)
-                  make.top.equalTo(self.snp.top)
-                  make.height.equalTo(60)
-              }
-          }
+    private func setupHeaderView() {
+        self.addSubview(headerView)
+        headerView.snp.makeConstraints { (make) in
+            make.centerX.equalTo(self.snp.centerX)
+            make.width.equalTo(self.snp.width)
+            make.top.equalTo(self.snp.top)
+            make.height.equalTo(60)
+        }
+    }
     
     private func setupPostView() {
-                 self.addSubview(postView)
-                 postView.snp.makeConstraints { (make) in
-                     make.centerX.equalTo(self.snp.centerX)
-                     make.width.equalTo(self.snp.width)
-                     make.top.equalTo(headerView.snp.bottom)
-                     make.height.equalTo(300)
-                 }
-             }
+        self.addSubview(postView)
+        postView.snp.makeConstraints { (make) in
+            make.centerX.equalTo(self.snp.centerX)
+            make.width.equalTo(self.snp.width)
+            make.top.equalTo(headerView.snp.bottom)
+            //                     make.height.equalTo(400)
+        }
+    }
     
     private func setupLikesView() {
         self.addSubview(likesView)

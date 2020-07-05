@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class PostView: UIView {
     //MARK: - Variables
@@ -15,13 +16,16 @@ class PostView: UIView {
         let l = UILabel()
         l.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 18)
         l.textAlignment = .left
+        l.numberOfLines = 0
+        l.backgroundColor = .blue
         l.textColor = .black
         return l
     }()
     
     private let imageView: UIImageView = {
         let iv = UIImageView()
-        iv.backgroundColor = .yellow
+        iv.backgroundColor = .black
+        iv.contentMode = .scaleAspectFill
         iv.layer.cornerRadius = 2
         iv.clipsToBounds = true
         return iv
@@ -35,10 +39,11 @@ class PostView: UIView {
         setupImageView()
     }
     
-    convenience init(textContent: String, image: UIImage) {
+    convenience init(textContent: String, imageUrl: URL) {
         self.init(frame: .zero)
         self.textContent.text = textContent
-        self.imageView.image = image
+        imageView.kf.setImage(with: imageUrl)
+        
     }
     
     required init?(coder: NSCoder) {
@@ -52,6 +57,7 @@ class PostView: UIView {
             make.leading.equalTo(self.snp.leading).offset(16)
             make.trailing.equalTo(self.snp.trailing).offset(-16)
             make.top.equalTo(self.snp.top).offset(5)
+            make.height.lessThanOrEqualTo(200)
         }
     }
     
@@ -62,7 +68,7 @@ class PostView: UIView {
             make.bottom.equalTo(self.snp.bottom).offset(-5)
             make.leading.equalTo(self.snp.leading).offset(16)
             make.trailing.equalTo(self.snp.trailing).offset(-16)
-            make.height.greaterThanOrEqualTo(200)
+            make.height.lessThanOrEqualTo(400)
         }
     }
 }

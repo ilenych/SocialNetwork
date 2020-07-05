@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class HeaderView: UIView {
     //MARK: - Variables
@@ -28,7 +29,6 @@ class HeaderView: UIView {
     
     private let subtitle: UILabel = {
         let l = UILabel()
-        l.text = "today 20 pm"
         l.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 14)
         l.textAlignment = .center
         l.textColor = .gray
@@ -43,11 +43,12 @@ class HeaderView: UIView {
         setupSubtitle()
     }
     
-    convenience init(title: String, subtitle: String, image: UIImage) {
+    convenience init(title: String, subtitle: String, imageUrl: URL) {
         self.init(frame: .zero)
         self.title.text = title
         self.subtitle.text = subtitle
-        self.imageView.image = image
+        imageView.kf.setImage(with: imageUrl)
+        
     }
     
     required init?(coder: NSCoder) {
