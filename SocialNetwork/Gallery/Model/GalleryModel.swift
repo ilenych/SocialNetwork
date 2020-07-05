@@ -15,5 +15,5 @@ struct GalleryModel: Decodable {
 
 struct GalleryContent: Decodable {
     let id: Int
-    let img: String
+    let img: URL
 }
