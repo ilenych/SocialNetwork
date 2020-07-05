@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 class GalleryViewController: UIViewController {
-    
+    //MARK: - Variamles
     private lazy var collectionView: UICollectionView = {
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -39,6 +39,7 @@ class GalleryViewController: UIViewController {
     private var galleryContent = [GalleryContent]()
     private var images = [UIImage]()
     
+    //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,8 +53,7 @@ class GalleryViewController: UIViewController {
             self.galleryContent = gallery
         }
     }
-    
-    
+
     //MARK: - Setups
     
     private func setupCollectionView() {
@@ -79,7 +79,7 @@ extension GalleryViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: GalleryCollectionViewCell.self), for: indexPath)
-        NetworkService.shared.downloadImage(urlString: self.galleryContent[indexPath.row].img) { (image) in
+        NetworkService.shared.downloadImage(url: self.galleryContent[indexPath.row].img) { (image) in
             /// Create image view
             let imageView = UIImageView(image: image)
             imageView.contentMode = .scaleAspectFill
