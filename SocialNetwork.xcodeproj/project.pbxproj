@@ -35,6 +35,8 @@
 		97BFE7E624B106FB0084FED0 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7E524B106FB0084FED0 /* PostView.swift */; };
 		97BFE7E824B1D0390084FED0 /* LikesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7E724B1D0390084FED0 /* LikesView.swift */; };
 		97BFE7EB24B1DCE60084FED0 /* CustomLikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7EA24B1DCE60084FED0 /* CustomLikeButton.swift */; };
+		97BFE7EE24B1F7190084FED0 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7ED24B1F7190084FED0 /* PostModel.swift */; };
+		97BFE7F124B2377B0084FED0 /* LikesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7F024B2377B0084FED0 /* LikesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		97BFE7E524B106FB0084FED0 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		97BFE7E724B1D0390084FED0 /* LikesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesView.swift; sourceTree = "<group>"; };
 		97BFE7EA24B1DCE60084FED0 /* CustomLikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLikeButton.swift; sourceTree = "<group>"; };
+		97BFE7ED24B1F7190084FED0 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		97BFE7F024B2377B0084FED0 /* LikesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesModel.swift; sourceTree = "<group>"; };
 		9E9F266393DAC84365244B95 /* Pods-SocialNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.debug.xcconfig"; path = "Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 		F8436F800D22839B4CD380EA /* Pods_SocialNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -208,6 +212,7 @@
 		97BFE7DE24B0FBE90084FED0 /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				97BFE7EF24B1F7910084FED0 /* Model */,
 				97BFE7E924B1D03D0084FED0 /* Views */,
 				97BFE7EC24B1E2270084FED0 /* Controllers */,
 			);
@@ -232,6 +237,15 @@
 				97BFE7E124B106030084FED0 /* PostTableViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		97BFE7EF24B1F7910084FED0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				97BFE7ED24B1F7190084FED0 /* PostModel.swift */,
+				97BFE7F024B2377B0084FED0 /* LikesModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A142B6542534BC3A37A0086A /* Frameworks */ = {
@@ -359,6 +373,7 @@
 			files = (
 				97BFE7EB24B1DCE60084FED0 /* CustomLikeButton.swift in Sources */,
 				97BFE7C424AFC0D80084FED0 /* GalleryViewController.swift in Sources */,
+				97BFE7F124B2377B0084FED0 /* LikesModel.swift in Sources */,
 				97BFE7BD24AF93780084FED0 /* NetworkService.swift in Sources */,
 				97BFE7C624AFC6B40084FED0 /* GalleryCollectionViewCell.swift in Sources */,
 				97BFE7DD24B0E3D80084FED0 /* PagePhotoViewController.swift in Sources */,
@@ -378,6 +393,7 @@
 				97BFE7E024B0FC060084FED0 /* HeaderView.swift in Sources */,
 				97BFE7D924B0E1180084FED0 /* CustomScrollView.swift in Sources */,
 				97BFE79B24AF64A00084FED0 /* AppDelegate.swift in Sources */,
+				97BFE7EE24B1F7190084FED0 /* PostModel.swift in Sources */,
 				97BFE7CB24B08CB80084FED0 /* GalleryModel.swift in Sources */,
 				97BFE7E224B106030084FED0 /* PostTableViewController.swift in Sources */,
 				97BFE79D24AF64A00084FED0 /* SceneDelegate.swift in Sources */,

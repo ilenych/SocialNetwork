@@ -7,5 +7,6 @@ target 'SocialNetwork' do
 
   # Pods for SocialNetwork
   pod 'SnapKit', '~> 5.0.0'
+  pod 'Kingfisher'
 
 end
