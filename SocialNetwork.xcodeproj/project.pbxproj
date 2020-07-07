@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0DF914960B80205357224A8F /* Pods_SocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8436F800D22839B4CD380EA /* Pods_SocialNetwork.framework */; };
 		9716859424B4CE1500F965EA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9716859324B4CE1400F965EA /* TabBarViewController.swift */; };
+		9716859724B4F65900F965EA /* PostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9716859624B4F65900F965EA /* PostPresenter.swift */; };
+		9716859924B4F69200F965EA /* PostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9716859824B4F69200F965EA /* PostInteractor.swift */; };
+		9716859B24B4F6A500F965EA /* PostConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9716859A24B4F6A500F965EA /* PostConfigurator.swift */; };
 		977F636F24B4C67B007FA525 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977F636E24B4C67B007FA525 /* Extensions.swift */; };
 		97BFE79B24AF64A00084FED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE79A24AF64A00084FED0 /* AppDelegate.swift */; };
 		97BFE79D24AF64A00084FED0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE79C24AF64A00084FED0 /* SceneDelegate.swift */; };
@@ -43,6 +46,9 @@
 /* Begin PBXFileReference section */
 		4127B1E8FC28AA903BA4C0B6 /* Pods-SocialNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.release.xcconfig"; path = "Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		9716859324B4CE1400F965EA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		9716859624B4F65900F965EA /* PostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPresenter.swift; sourceTree = "<group>"; };
+		9716859824B4F69200F965EA /* PostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInteractor.swift; sourceTree = "<group>"; };
+		9716859A24B4F6A500F965EA /* PostConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostConfigurator.swift; sourceTree = "<group>"; };
 		977F636E24B4C67B007FA525 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		97BFE79724AF64A00084FED0 /* SocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BFE79A24AF64A00084FED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -233,7 +239,7 @@
 			children = (
 				97BFE7EF24B1F7910084FED0 /* Model */,
 				97BFE7E924B1D03D0084FED0 /* Views */,
-				97BFE7EC24B1E2270084FED0 /* Controllers */,
+				97BFE7EC24B1E2270084FED0 /* VIPER */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -250,12 +256,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		97BFE7EC24B1E2270084FED0 /* Controllers */ = {
+		97BFE7EC24B1E2270084FED0 /* VIPER */ = {
 			isa = PBXGroup;
 			children = (
 				97BFE7E124B106030084FED0 /* PostTableViewController.swift */,
+				9716859624B4F65900F965EA /* PostPresenter.swift */,
+				9716859824B4F69200F965EA /* PostInteractor.swift */,
+				9716859A24B4F6A500F965EA /* PostConfigurator.swift */,
 			);
-			path = Controllers;
+			path = VIPER;
 			sourceTree = "<group>";
 		};
 		97BFE7EF24B1F7910084FED0 /* Model */ = {
@@ -396,6 +405,8 @@
 				97BFE7C424AFC0D80084FED0 /* GalleryViewController.swift in Sources */,
 				97BFE7F124B2377B0084FED0 /* LikesModel.swift in Sources */,
 				97BFE7BD24AF93780084FED0 /* NetworkService.swift in Sources */,
+				9716859B24B4F6A500F965EA /* PostConfigurator.swift in Sources */,
+				9716859924B4F69200F965EA /* PostInteractor.swift in Sources */,
 				97BFE7C624AFC6B40084FED0 /* GalleryCollectionViewCell.swift in Sources */,
 				97BFE7DD24B0E3D80084FED0 /* PagePhotoViewController.swift in Sources */,
 				97BFE7C924B089FE0084FED0 /* DataFetcherService.swift in Sources */,
@@ -410,6 +421,7 @@
 				97BFE7E624B106FB0084FED0 /* PostView.swift in Sources */,
 				97BFE7B524AF72830084FED0 /* CustomLabel.swift in Sources */,
 				97BFE7B124AF6EA70084FED0 /* Router.swift in Sources */,
+				9716859724B4F65900F965EA /* PostPresenter.swift in Sources */,
 				97BFE7E024B0FC060084FED0 /* HeaderView.swift in Sources */,
 				97BFE7D924B0E1180084FED0 /* CustomScrollView.swift in Sources */,
 				97BFE79B24AF64A00084FED0 /* AppDelegate.swift in Sources */,
