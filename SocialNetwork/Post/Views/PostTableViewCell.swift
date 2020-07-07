@@ -16,7 +16,7 @@ class PostTableViewCell: UITableViewCell {
     
     private lazy var headerView: HeaderView = {
         guard let postContent = postContent else {return HeaderView() }
-        let hv = HeaderView(title: postContent.userName , subtitle: postContent.time, imageUrl: postContent.postUrlImage)
+        let hv = HeaderView(title: postContent.userName , date: postContent.time, imageUrl: postContent.postUrlImage)
         hv.backgroundColor = .green
         return hv
     }()
