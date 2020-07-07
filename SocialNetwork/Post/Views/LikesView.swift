@@ -62,11 +62,11 @@ class LikesView: UIView {
     //FIXME: - Убрать везде String
     convenience init(model: LikesModel) {
         self.init(frame: .zero)
-        self.fireButton.setTitle(String(model.likeFire), for: .normal)
-        self.heartEyesButton.setTitle(String(model.likeHeartEyes), for: .normal)
-        self.rocketButton.setTitle(String(model.likeRocket), for: .normal)
-        self.likeButton.setTitle(String(model.likeLike), for: .normal)
-        self.bombButton.setTitle(String(model.likeBomb), for: .normal)
+        self.fireButton.setTitle(String(model.likeFire ?? 0), for: .normal)
+        self.heartEyesButton.setTitle(String(model.likeHeartEyes ?? 0), for: .normal)
+        self.rocketButton.setTitle(String(model.likeRocket ?? 0), for: .normal)
+        self.likeButton.setTitle(String(model.likeLike ?? 0), for: .normal)
+        self.bombButton.setTitle(String(model.likeBomb ?? 0), for: .normal)
         self.commentButton.setTitle("Soon", for: .normal)
     }
     
