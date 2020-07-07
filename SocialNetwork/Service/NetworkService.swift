@@ -43,6 +43,9 @@ class NetworkService: DataFetcherProtocol {
         guard let url = URL(string: urlString) else { return }
         guard let data = try? Data(contentsOf: url) else { return }
         let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601Full)
+        
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
         do {
             let objects: [T] = try decoder.decode([T].self, from: data)
             response(objects)
@@ -63,3 +66,4 @@ class NetworkService: DataFetcherProtocol {
         }
     }
 }
+

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0DF914960B80205357224A8F /* Pods_SocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8436F800D22839B4CD380EA /* Pods_SocialNetwork.framework */; };
+		9716859424B4CE1500F965EA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9716859324B4CE1400F965EA /* TabBarViewController.swift */; };
+		977F636F24B4C67B007FA525 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977F636E24B4C67B007FA525 /* Extensions.swift */; };
 		97BFE79B24AF64A00084FED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE79A24AF64A00084FED0 /* AppDelegate.swift */; };
 		97BFE79D24AF64A00084FED0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE79C24AF64A00084FED0 /* SceneDelegate.swift */; };
 		97BFE79F24AF64A00084FED0 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE79E24AF64A00084FED0 /* AuthViewController.swift */; };
@@ -21,7 +23,6 @@
 		97BFE7B824AF74A20084FED0 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7B724AF74A20084FED0 /* CustomView.swift */; };
 		97BFE7BB24AF84230084FED0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7BA24AF84230084FED0 /* SignupViewController.swift */; };
 		97BFE7BD24AF93780084FED0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7BC24AF93780084FED0 /* NetworkService.swift */; };
-		97BFE7C024AFC00E0084FED0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7BF24AFC00E0084FED0 /* TabBarViewController.swift */; };
 		97BFE7C424AFC0D80084FED0 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7C324AFC0D80084FED0 /* GalleryViewController.swift */; };
 		97BFE7C624AFC6B40084FED0 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7C524AFC6B40084FED0 /* GalleryCollectionViewCell.swift */; };
 		97BFE7C924B089FE0084FED0 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BFE7C824B089FE0084FED0 /* DataFetcherService.swift */; };
@@ -41,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		4127B1E8FC28AA903BA4C0B6 /* Pods-SocialNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.release.xcconfig"; path = "Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.release.xcconfig"; sourceTree = "<group>"; };
+		9716859324B4CE1400F965EA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		977F636E24B4C67B007FA525 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		97BFE79724AF64A00084FED0 /* SocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BFE79A24AF64A00084FED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97BFE79C24AF64A00084FED0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +59,6 @@
 		97BFE7B724AF74A20084FED0 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		97BFE7BA24AF84230084FED0 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		97BFE7BC24AF93780084FED0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		97BFE7BF24AFC00E0084FED0 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = SocialNetwork/TabBarViewController.swift; sourceTree = SOURCE_ROOT; };
 		97BFE7C324AFC0D80084FED0 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		97BFE7C524AFC6B40084FED0 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		97BFE7C824B089FE0084FED0 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
@@ -97,6 +99,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9716859524B4CE5400F965EA /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				9716859324B4CE1400F965EA /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		977F637024B4C694007FA525 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				977F636E24B4C67B007FA525 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		97BFE78E24AF64A00084FED0 = {
 			isa = PBXGroup;
 			children = (
@@ -120,15 +138,16 @@
 			children = (
 				97BFE79A24AF64A00084FED0 /* AppDelegate.swift */,
 				97BFE79C24AF64A00084FED0 /* SceneDelegate.swift */,
-				97BFE7BF24AFC00E0084FED0 /* TabBarViewController.swift */,
+				9716859524B4CE5400F965EA /* TabBar */,
 				97BFE7DE24B0FBE90084FED0 /* Post */,
 				97BFE7BE24AFBFB60084FED0 /* Auth */,
 				97BFE7D424B0B2B10084FED0 /* Gallery */,
+				97BFE7C724AFC8510084FED0 /* Service */,
+				977F637024B4C694007FA525 /* Extensions */,
 				97BFE7A024AF64A00084FED0 /* Main.storyboard */,
 				97BFE7A324AF64A20084FED0 /* Assets.xcassets */,
 				97BFE7A524AF64A20084FED0 /* LaunchScreen.storyboard */,
 				97BFE7A824AF64A20084FED0 /* Info.plist */,
-				97BFE7C724AFC8510084FED0 /* Service */,
 			);
 			path = SocialNetwork;
 			sourceTree = "<group>";
@@ -371,7 +390,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9716859424B4CE1500F965EA /* TabBarViewController.swift in Sources */,
 				97BFE7EB24B1DCE60084FED0 /* CustomLikeButton.swift in Sources */,
+				977F636F24B4C67B007FA525 /* Extensions.swift in Sources */,
 				97BFE7C424AFC0D80084FED0 /* GalleryViewController.swift in Sources */,
 				97BFE7F124B2377B0084FED0 /* LikesModel.swift in Sources */,
 				97BFE7BD24AF93780084FED0 /* NetworkService.swift in Sources */,
@@ -380,7 +401,6 @@
 				97BFE7C924B089FE0084FED0 /* DataFetcherService.swift in Sources */,
 				97BFE7DB24B0E2450084FED0 /* PhotoViewController.swift in Sources */,
 				97BFE7BB24AF84230084FED0 /* SignupViewController.swift in Sources */,
-				97BFE7C024AFC00E0084FED0 /* TabBarViewController.swift in Sources */,
 				97BFE7B324AF71770084FED0 /* LoginViewController.swift in Sources */,
 				97BFE7B824AF74A20084FED0 /* CustomView.swift in Sources */,
 				97BFE7E424B1068D0084FED0 /* PostTableViewCell.swift in Sources */,

@@ -75,7 +75,11 @@ class LikesView: UIView {
     }
     
     @objc func didTapFireButton(sender: UIButton) {
-        print(sender.titleLabel?.text)
+        print("sender", sender)
+//        guard var text = sender.titleLabel?.text else { return }
+//        text = Int(text) + 1
+//        sender.titleLabel?.text = String(text)
+        
     }
     
     

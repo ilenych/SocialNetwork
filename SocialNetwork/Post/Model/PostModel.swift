@@ -11,7 +11,7 @@ struct PostModel: Decodable {
     let id: Int
     let userName: String
     let userUrlImage: URL
-    let time: String
+    let time: Date
     let postText: String
     let postUrlImage: URL
     let idUser: Int

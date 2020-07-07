@@ -79,6 +79,7 @@ extension GalleryViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: GalleryCollectionViewCell.self), for: indexPath)
+        
         NetworkService.shared.downloadImage(url: self.galleryContent[indexPath.row].img) { (image) in
             /// Create image view
             let imageView = UIImageView(image: image)
