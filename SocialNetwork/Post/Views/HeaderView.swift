@@ -43,10 +43,10 @@ class HeaderView: UIView {
         setupSubtitle()
     }
     
-    convenience init(title: String, subtitle: String, imageUrl: URL) {
+    convenience init(title: String, date: Date, imageUrl: URL) {
         self.init(frame: .zero)
         self.title.text = title
-        self.subtitle.text = subtitle
+        self.subtitle.text = date.asString()
         imageView.kf.setImage(with: imageUrl)
         
     }
