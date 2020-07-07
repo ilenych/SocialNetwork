@@ -15,15 +15,20 @@ class PostTableViewCell: UITableViewCell {
     var likesContent: LikesModel?
     
     private lazy var headerView: HeaderView = {
-        guard let postContent = postContent else {return HeaderView() }
-        let hv = HeaderView(title: postContent.userName , date: postContent.time, imageUrl: postContent.postUrlImage)
+        guard let title    = postContent?.userName,
+              let date     = postContent?.time,
+              let imageUrl = postContent?.postUrlImage
+            else {return HeaderView() }
+        let hv = HeaderView(title: title , date: date, imageUrl: imageUrl)
         hv.backgroundColor = .green
         return hv
     }()
     
     private lazy var postView: PostView = {
-         guard let postContent = postContent else { return PostView() }
-        let pv = PostView(textContent: postContent.postText, imageUrl: postContent.postUrlImage )
+        guard let textContent = postContent?.postText,
+              let imageUrl    = postContent?.postUrlImage
+            else { return PostView() }
+        let pv = PostView(textContent: textContent, imageUrl: imageUrl)
         pv.backgroundColor = .yellow
         return pv
     }()
@@ -71,7 +76,6 @@ class PostTableViewCell: UITableViewCell {
             make.centerX.equalTo(self.snp.centerX)
             make.width.equalTo(self.snp.width)
             make.top.equalTo(headerView.snp.bottom)
-            //                     make.height.equalTo(400)
         }
     }
     
