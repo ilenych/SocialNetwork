@@ -27,7 +27,6 @@ class NetworkService: DataFetcherProtocol {
     
     func decodeJSON<T: Decodable>(type: T.Type, data: Data?) -> T? {
         let decoder = JSONDecoder()
-        print(type)
         guard let data = data else { return nil }
         do {
             let objects = try decoder.decode(type.self, from: data)
@@ -53,17 +52,27 @@ class NetworkService: DataFetcherProtocol {
             print("Failed to decode JSON", jsonError)
             return
         }
-        
     }
-    /// Download  image
-    func downloadImage(url: URL, completion: @escaping (_ image: UIImage)->()) {
-        DispatchQueue.main.async {
-            guard let imageData = try? Data(contentsOf: url) else { return }
-            let image = UIImage(data: imageData)
-            if let image = image {
-                completion(image)
+    
+    /// Download image
+    func downloadImage(url: URL, completion: @escaping (_ image: UIImage, _ data: Data, _ response: URLResponse)->()) {
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                print(error)
+                return
             }
-        }
+            guard let data = data, let response = response else { return }
+            guard let responseURL = response.url else { return }
+            
+            if responseURL != url { return }
+            
+            guard let image = UIImage(data: data) else { return }
+            
+            DispatchQueue.main.async {
+                completion(image, data, response)
+            }
+            
+        }.resume()
     }
 }
 
