@@ -36,3 +36,11 @@ extension Date {
         }
     }
 }
+//Conver string to URL
+extension String {
+    func getURL() -> URL? {
+        guard let url = URL(string: self) else { return nil}
+        return url
+    }
+}
+
