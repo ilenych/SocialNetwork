@@ -8,7 +8,15 @@
 import UIKit
 import SnapKit
 
+protocol GalleryViewProtocol: class {
+    
+}
+
 class GalleryViewController: UIViewController {
+    //MARK: - VIPER Variables
+    var presenter: GalleryPresenterProtocol!
+    private let configure: GalleryConfiguratorProtocol = GalleryConfigurator()
+    
     //MARK: - Variamles
     private lazy var collectionView: UICollectionView = {
         
@@ -35,23 +43,21 @@ class GalleryViewController: UIViewController {
         return ai
     }()
     
-    /// For model
-    private var galleryContent = [GalleryContent]()
-    private var images = [UIImage]()
     
     //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /// VIPER
+        configure.configure(with: self)
+        presenter.viewDidLoad()
+        
+        /// Register cell
+        collectionView.register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: GalleryCollectionViewCell.self))
+        
         /// Setups
         setupCollectionView()
         setupActivityIndicator()
-        
-        /// Fetch json to model
-        DataFetcherService.shared.fetchGallary { (galleryModel) in
-            guard let gallery = galleryModel?.gallery else { return }
-            self.galleryContent = gallery
-        }
     }
 
     //MARK: - Setups
@@ -74,33 +80,24 @@ class GalleryViewController: UIViewController {
 //MARK: - UICollectionViewDataSource
 extension GalleryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return galleryContent.count
+        return presenter.galleryContent.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: GalleryCollectionViewCell.self), for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: GalleryCollectionViewCell.self), for: indexPath) as! GalleryCollectionViewCell
         
-        NetworkService.shared.downloadImage(url: self.galleryContent[indexPath.row].img) { (image) in
-            /// Create image view
-            let imageView = UIImageView(image: image)
-            imageView.contentMode = .scaleAspectFill
-            imageView.layer.masksToBounds = true
-            /// add image in array
-            self.images.append(image)
-            
-            /// display image
-            DispatchQueue.main.async {
-                cell.backgroundView = imageView
-            }
-            /// stop activityIndicator
-            self.activityIndicator.stopAnimating()
-            
-            /// set border to cell
-            cell.layer.borderWidth = 1
-            cell.layer.borderColor = UIColor.white.cgColor
-        }
+        guard let imageUrl = presenter.galleryContent(atIndex: indexPath)?.img else { return UICollectionViewCell() }
+        /// Set image
+        cell.imageView.fetchImage(with: imageUrl)
+        /// Stop Indicator
+        activityIndicator.stopAnimating()
+        /// Setups layer
+        cell.layer.borderWidth = 1
+        cell.layer.borderColor = UIColor.white.cgColor
+        
         return cell
     }
+    
 }
 
 //MARK: - UICollectionViewDelegate
@@ -108,8 +105,15 @@ extension GalleryViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let ppvc: PagePhotoViewController = PagePhotoViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        ppvc.images = images
+        //FIXME: - Передать zoom view 
+//        guard let imageUrl = presenter.galleryContent(atIndex: indexPath)?.img else { return }
+//        ppvc.images
         ppvc.didSelectItem = indexPath.row
         self.present(ppvc, animated: true)
     }
+}
+
+//MARK: - GalleryViewProtocol
+extension GalleryViewController: GalleryViewProtocol {
+    
 }
